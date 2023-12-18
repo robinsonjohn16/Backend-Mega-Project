@@ -1,0 +1,16 @@
+{
+  "name": "backend-megaproject",
+  "version": "1.0.0",
+  "description": "This is Mega Youtube App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "javascript"
+  ],
+  "author": "Nadar Robinson",
+  "license": "ISC"
+}
