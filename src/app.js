@@ -16,11 +16,19 @@ app.use(
 );
 //* Before we needed Body Parser for this
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
-app.use(express.static);
-app.use(cookieParser());  
+app.use(express.static("public"));
+app.use(cookieParser());
 
 //* What is Middle Ware?
 //? When the user requests a url we perform some task, but we cannot do the work for all user, so we neend some middle checks also called as middleware to make it accessible to some people only
 
-// todo: (err, req, res, next) =>  
+// todo: (err, req, res, next) =>
+
+// Routes Import
+import userRouter from "./routes/user.route.js";
+
+// Router Declaration
+//? we cannot use app.get here as we have imported Roters, so middle ware is needed
+app.use("/api/v1/users", userRouter);
+
 export default app;

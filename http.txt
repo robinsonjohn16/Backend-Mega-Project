@@ -1,0 +1,22 @@
+This is Video 11
+
+HTTP => Hyper text transfer protocal
+URL => Uniform Resource Locator
+URI => Uniform Resource Indentifier
+URN => Uniform Resource Name
+
+
+What is Header?
+used for caching, auth, managing state
+
+before 2012 x-prefix was used but now it is depricated, and now we can or cannot use our wish
+
+Http method
+GET : retrive a Resource
+HEAD : No message body (response Header only)
+OPTIONS : What operation are Available
+TRACE : loopback test (get some data)
+DELETE : remove Resource
+PUT : replace Resource
+POST : interact with Resource(mostly add)
+PATCH : change part of Resource
