@@ -11,13 +11,13 @@ app.use(
 );
 app.use(
   express.json({
-    limit: "16kb",
+    limit: "16kb",  
   })
 );
 //* Before we needed Body Parser for this
 app.use(express.urlencoded({ extended: true, limit: "16kb" }));
-app.use(express.static("public"));
-app.use(cookieParser());
+app.use(express.static("public")); // File Folder
+app.use(cookieParser());  
 
 //* What is Middle Ware?
 //? When the user requests a url we perform some task, but we cannot do the work for all user, so we neend some middle checks also called as middleware to make it accessible to some people only

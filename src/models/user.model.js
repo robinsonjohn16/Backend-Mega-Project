@@ -13,7 +13,7 @@ const userSchema = new Schema(
       index: true,
     },
     fullname: {
-      type: String, 
+      type: String,
       required: true,
       index: true,
       trim: true,
@@ -40,7 +40,7 @@ const userSchema = new Schema(
     ],
     password: {
       type: String,
-      required: [true, "Password is Required"],
+      required: [true, "Password is Required"], //Can give it all True Field
     },
     refreshToken: {
       type: String,
@@ -55,8 +55,9 @@ const userSchema = new Schema(
 
 // ? We cannot use arrow function for call back for pre => Since it does not have  this keyword
 userSchema.pre("save", async function (next) {
+  //?Before Save Do this
   if (!this.isModified("password")) return next(); // ? We want to do this if the password is changed
-  this.password = bcrypt.hash(this.password, 10); //?The 10 is round here
+  this.password = await bcrypt.hash(this.password, 10); //?The 10 is round here
   next();
 });
 

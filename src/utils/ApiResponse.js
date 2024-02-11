@@ -7,6 +7,7 @@ class ApiResponse {
   }
 }
 
+export { ApiResponse };
 // ?The Codes
 
 // Informational responses (100 – 199)
